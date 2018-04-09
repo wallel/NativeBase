@@ -22,6 +22,8 @@ fadeAnim:new _reactNative.Animated.Value(0)};return _this;
 
 
 
+
+
 {
 return{
 position:"absolute",
@@ -92,19 +94,19 @@ modalVisible:false});
 {var _this4=this;
 if(this.state.modalVisible){
 return(
-_react2.default.createElement(_reactNative.Animated.View,{style:this.getToastStyle(),__source:{fileName:_jsxFileName,lineNumber:95}},
+_react2.default.createElement(_reactNative.Animated.View,{style:this.getToastStyle(),__source:{fileName:_jsxFileName,lineNumber:97}},
 _react2.default.createElement(_Toast.Toast,{
 style:this.state.style,
 danger:this.state.type=="danger"?true:false,
 success:this.state.type=="success"?true:false,
-warning:this.state.type=="warning"?true:false,__source:{fileName:_jsxFileName,lineNumber:96}},
+warning:this.state.type=="warning"?true:false,__source:{fileName:_jsxFileName,lineNumber:98}},
 
-_react2.default.createElement(_Text.Text,{style:this.state.textStyle,__source:{fileName:_jsxFileName,lineNumber:102}},
+_react2.default.createElement(_Text.Text,{style:this.state.textStyle,__source:{fileName:_jsxFileName,lineNumber:104}},
 this.state.text),
 
 this.state.buttonText&&
-_react2.default.createElement(_Button.Button,{style:this.state.buttonStyle,onPress:function onPress(){return _this4.closeToast();},__source:{fileName:_jsxFileName,lineNumber:106}},
-_react2.default.createElement(_Text.Text,{style:this.state.buttonTextStyle,__source:{fileName:_jsxFileName,lineNumber:107}},
+_react2.default.createElement(_Button.Button,{style:this.state.buttonStyle,onPress:function onPress(){return _this4.closeToast();},__source:{fileName:_jsxFileName,lineNumber:108}},
+_react2.default.createElement(_Text.Text,{style:this.state.buttonTextStyle,__source:{fileName:_jsxFileName,lineNumber:109}},
 this.state.buttonText)))));
 
 
@@ -112,7 +114,7 @@ this.state.buttonText)))));
 
 
 }else return null;
-}}],[{key:"show",value:function show(_ref2){var config=_objectWithoutProperties(_ref2,[]);this.toastInstance._root.showToast({config:config});}}]);return ToastContainer;}(_react.Component);
+}}],[{key:"show",value:function show(_ref2){var config=_objectWithoutProperties(_ref2,[]);if(this.toastInstance&&this.toastInstance._root){this.toastInstance._root.showToast({config:config});}}}]);return ToastContainer;}(_react.Component);
 
 
 ToastContainer.propTypes=_extends({},_Utils.ViewPropTypes,{

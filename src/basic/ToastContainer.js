@@ -20,7 +20,9 @@ class ToastContainer extends Component {
 	}
 	static toastInstance;
 	static show({ ...config }) {
-		this.toastInstance._root.showToast({ config });
+		if(this.toastInstance && this.toastInstance._root){
+            this.toastInstance._root.showToast({ config });
+		}
 	}
 	getToastStyle() {
 		return {
